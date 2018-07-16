@@ -1,0 +1,9 @@
+{
+    "ip": "localhost",
+    "port": 27017,
+    "collection": "dolven_db",
+    "dbuser": "jonghyun",
+    "dbpassword": "5tgb6y",
+    "dbIp": "ds127993.mlab.com",
+    "dbPort": 27993
+}

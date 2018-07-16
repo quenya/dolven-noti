@@ -1,0 +1,17 @@
+{ Error: socket hang up
+    at createHangUpError (_http_client.js:254:15)
+    at Socket.socketOnEnd (_http_client.js:346:23)
+    at emitNone (events.js:91:20)
+    at Socket.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9) code: 'ECONNRESET' }
+
+
+
+FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
+ 1: node::Abort() [/usr/local/bin/node]
+ 2: node::FatalException(v8::Isolate*, v8::Local<v8::Value>, v8::Local<v8::Message>) [/usr/local/bin/node]
+ 3: v8::internal::V8::FatalProcessOutOfMemory(char const*, bool) [/usr/local/bin/node]
+ 4: v8::internal::Factory::NewRawOneByteString(int, v8::internal::PretenureFlag) [/usr/local/bin/node]
+ 5: v8::internal::Factory::NumberToString(v8::internal::Handle<v8::internal::Object>, bool) [/usr/local/bin/node]
