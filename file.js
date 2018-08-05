@@ -1,14 +1,17 @@
 var fs = require("fs");
 
+var invenData = {};
+
 exports.loadDataJsonFile = function (filePath, callback) {
     var obj = fs.readFileSync(filePath);
-    return JSON.parse(obj);
+    invenData = JSON.parse(obj);
+    return invenData;
 };
 
-// function saveDataJsonFile(key, val) {
-//     invenData.key = val;
-//     fs.writeFile('invenData.json', invenData, function (err) {
-//         if (err) throw err;
-//         console.log('saved!');
-//     })
-// }
+exports.saveDataJsonFile = function (key, val) {
+    invenData[key] = val;
+    fs.writeFile('./data/invenData.json', JSON.stringify(invenData), function (err) {
+        if (err) throw err;
+        console.log('saved!');
+    })
+}

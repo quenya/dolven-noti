@@ -36,6 +36,10 @@ function notifyBot(newPosts) {
     telebot.sendBotMessages(newPosts);
 };
 
+function saveLastNumber(number) {
+    fs.saveDataJsonFile('lastNumber', number);
+};
+
 function notifyCallback(newPosts) {
     var oldVal = {};
     for (var attr in invenData) {
@@ -50,6 +54,7 @@ function notifyCallback(newPosts) {
         console.log("New Last post: " + invenData.lastNumber);
         
         // db.saveDataJsonDb(oldVal, invenData);
+        saveLastNumber(invenData.lastNumber);
         
         notifyBot(newPosts);
     }
